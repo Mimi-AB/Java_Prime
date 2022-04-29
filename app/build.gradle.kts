@@ -17,12 +17,25 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testImplementation("junit:junit:4.13.2")
 
     // This dependency is used by the application.
     implementation("com.google.guava:guava:30.1.1-jre")
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation("org.seleniumhq.selenium:selenium-java:4.1.3")
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+    implementation("org.seleniumhq.selenium:selenium-chrome-driver:4.1.3")
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver
+    implementation("org.seleniumhq.selenium:selenium-safari-driver:4.1.3")
+
+
 }
+
 
 application {
     // Define the main class for the application.
@@ -31,5 +44,9 @@ application {
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
+
+tasks.withType<Test> {
     useJUnitPlatform()
 }
