@@ -43,12 +43,16 @@ public class SeleniumTestPrima
      public void wikiWorks()
         {
             //Navigate to website
-            driver.get("https://www.wikipedia.org");
+            //driver.get("https://www.wikipedia.org");
+            driver.get("https://revature.com");
             //Click on the English link
-            WebElement eng = driver.findElement(By.id("js-link-box-en"));
-            eng.click();
+            //WebElement eng = driver.findElement(By.id("js-link-box-en"));
+            WebElement hire = driver.findElement(By.xpath("//*[@id=\"menu-item-28836\"]/a"));
+            hire.click();
+            //eng.click();
             //Verify that we made it to the random page by using title
-            assertEquals("Wikipedia, the free encyclopedia", driver.getTitle());
+            //assertEquals("Wikipedia, the free encyclopedia", driver.getTitle());
+            assertEquals("Revature | Changing The Way The World Hires Talent", driver.getTitle());
 
         }
 
