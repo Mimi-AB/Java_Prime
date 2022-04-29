@@ -14,7 +14,7 @@ import java.io.File;
 import static org.junit.Assert.assertEquals;
 public class SeleniumTestPrima
 {
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     @BeforeClass
     public static void setup()
